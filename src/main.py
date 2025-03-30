@@ -150,10 +150,15 @@ async def main():
         sys.exit(1)
 
 
-if __name__ == "__main__":
+def main_entry():
+    """Entry point for console script."""
     # Create event loop
     loop = asyncio.get_event_loop()
     try:
         loop.run_until_complete(main())
     finally:
-        loop.close() 
+        loop.close()
+
+
+if __name__ == "__main__":
+    main_entry() 
